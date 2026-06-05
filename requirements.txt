@@ -1,0 +1,17 @@
+# Core Tinker training stack (versions tested on Alliance Fir with Python 3.11).
+# Install tinker-cookbook from source first — see README.md.
+
+tinker>=0.8.0
+chz>=0.4.0
+torch>=2.4.0
+transformers>=4.56.0
+datasets>=4.0.0
+vllm>=0.12.0
+peft>=0.18.0
+huggingface_hub>=0.36.0
+accelerate
+safetensors
+einops
+
+# Nemotron base model merge (optional; only if merging LoRA locally)
+# causal-conv1d and mamba-ssm — see README "Merge LoRA" section

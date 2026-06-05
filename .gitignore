@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.tinker_env
+*.env.local
+
+# Training outputs
+log/
+log_*/
+checkpoints/
+tinker_downloads/
+merged-final/
+*.out
+*.err
+
+# HF / caches
+.huggingface/
+huggingface_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
