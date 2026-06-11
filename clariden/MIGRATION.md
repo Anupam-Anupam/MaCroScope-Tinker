@@ -37,15 +37,20 @@ chmod 600 ~/user.env
 
 ---
 
-## Step 2 — Transfer bundle to Clariden
+## Step 2 — Transfer to Clariden
 
-From a machine that can reach both (or laptop as relay):
+**Fir cannot `scp` directly to Clariden** (different networks). Bundle is on private HF:
+
+- **Bundle:** [ai4collaboration/clariden-transport-bundle](https://huggingface.co/ai4collaboration/clariden-transport-bundle) (private)
+- **Secrets:** [ai4collaboration/clariden-migration-secrets](https://huggingface.co/ai4collaboration/clariden-migration-secrets) (private; `HF_TOKEN` redacted — paste from Fir `~/.tinker_env`)
+
+On Clariden (one-time: put `HF_TOKEN` in `~/user.env`, then):
 
 ```bash
-scp /scratch/anupam/clariden_transport_bundle.tar.gz clariden:~/scratch/
+bash clariden/fetch_on_clariden.sh
 ```
 
-Or use [Swiss AI `cscs-cl`](https://github.com/swiss-ai/reasoning_getting-started) SSH setup.
+Or clone repo and run `clariden/fetch_on_clariden.sh` from GitHub.
 
 ---
 
