@@ -168,6 +168,10 @@ python scripts/push_to_hf.py \
 | Base model | [nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-Base-BF16) |
 | Verifier | [TIGER-Lab/general-verifier](https://huggingface.co/TIGER-Lab/general-verifier) |
 
+## Migrating Fir → Clariden (CSCS)
+
+See **[clariden/MIGRATION.md](clariden/MIGRATION.md)** for exporting from Alliance Fir and recreating the env on Clariden (ARM64 GH200). The Fir venv cannot be copied verbatim — use `clariden/export_from_fir.sh` on Fir and `clariden/setup_clariden.sh` on Clariden.
+
 ## Acknowledgements
 
 - Training loop adapted from [tinker-cookbook `rl_loop.py`](https://github.com/thinking-machines-lab/tinker-cookbook/blob/main/tinker_cookbook/recipes/rl_loop.py)

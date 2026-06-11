@@ -1,0 +1,25 @@
+# Core stack for MaCroScope Tinker training on Clariden (ARM64 GH200).
+# Install inside your container/conda env AFTER torch is available.
+# Full Fir freeze for reference: requirements-fir-freeze-sanitized.txt
+
+tinker>=0.8.0
+chz>=0.4.0
+transformers>=4.56.0
+datasets>=4.0.0
+accelerate>=1.12.0
+peft>=0.18.0
+huggingface_hub>=0.36.0
+safetensors
+einops
+blobfile
+math-verify
+tiktoken
+rich
+termcolor
+
+# Verifier runs locally via vLLM — confirm ARM wheel availability on Clariden before install.
+vllm>=0.12.0
+
+# Nemotron merge only (not needed for Tinker training driver itself)
+# causal-conv1d
+# mamba-ssm
